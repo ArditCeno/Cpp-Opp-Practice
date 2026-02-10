@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+class Person{
+    public:
+    string name;
+    int age;
+    
+    void printo(){
+        cout << name << " " << age << "\n";
+    }
+};
+
+int main (){
+    vector<Person> people;
+    
+    Person p1;
+    p1.name="Ardit";
+    p1.age=20;
+    
+    Person p2;
+    p2.name="Klea";
+    p2.age= 26;
+    
+    Person p3;
+    p3.name = "Joana";
+    p3.age = 30;
+    
+    Person p4;
+    p4.name= "Juela";
+    p4.age= 32 ;
+    
+    
+    people.push_back(p1);
+    people.push_back(p2);
+    people.push_back(p3);
+    people.push_back(p4);
+
+    for(Person p : people) {
+        p.printo();
+    }
+}
