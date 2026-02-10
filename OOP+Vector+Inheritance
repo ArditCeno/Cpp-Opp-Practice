@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+template<typename T>
+T sumVector(vector<T> v) {
+    T sum = 0;
+
+    for(T x : v) {
+        sum += x;
+    }
+
+    return sum;
+}
+
+int main() {
+
+    int n;
+    cout << "Sa numra int? ";
+    cin >> n;
+
+    vector<int> a(n);
+
+    for(int i = 0; i < n; i++) {
+        cout << "Int[" << i << "]: ";
+        cin >> a[i];
+    }
+
+    int m;
+    cout << "Sa numra double? ";
+    cin >> m;
+
+    vector<double> b(m);
+
+    for(int i = 0; i < m; i++) {
+        cout << "Double[" << i << "]: ";
+        cin >> b[i];
+    }
+
+    cout << "Sum int: " << sumVector(a) << "\n";
+    cout << "Sum double: " << sumVector(b) << "\n";
+}
